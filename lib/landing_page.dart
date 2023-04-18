@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:trah_trahich/on_boarding_page.dart';
 
 class LandingPage extends StatefulWidget {
   const LandingPage({super.key});
@@ -12,7 +11,7 @@ class _LandingPageState extends State<LandingPage> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(const Duration(seconds: 5)).then((value) => Navigator.of(context).push(MaterialPageRoute(builder:(context) => const OnBoardingPage())));
+    Future.delayed(const Duration(seconds: 5)).then((value) => Navigator.of(context).pushReplacementNamed("boardingPage"));
   }
   @override
   Widget build(BuildContext context) {
@@ -40,7 +39,6 @@ class _LandingPageState extends State<LandingPage> {
               )
           ),
           const Positioned(
-
               bottom: 32,
               left: 0,
               right: 0,
